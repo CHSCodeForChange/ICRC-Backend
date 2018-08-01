@@ -1,0 +1,72 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "e0f9acf9f4906ad803ee6e6fe5e3ae9410d215286223d4b7425c130e3b3ccbd2"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "babel": {
+            "hashes": [
+                "sha256:6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669",
+                "sha256:8cba50f48c529ca3fa18cf81fa9403be176d374ac4d60738b839122dfaaa3d23"
+            ],
+            "version": "==2.6.0"
+        },
+        "django": {
+            "hashes": [
+                "sha256:353d129f22e1d24980d6061666f435781141c2dfd852f14ffc8a670175821034",
+                "sha256:90952c46d2b7b042db00e98b05f5dd97a5775822948d46fd82ff074d8ac75853"
+            ],
+            "index": "pypi",
+            "version": "==1.11.9"
+        },
+        "django-localflavor": {
+            "hashes": [
+                "sha256:50d7b694c9851224c352dba9cac63879343be8bd2f86f6b8e1465de53da34c90",
+                "sha256:d9cde0b531c0d33f9d22e90a0bf27f56a8394c6a68e68cacdc03942a797b2aff"
+            ],
+            "index": "pypi",
+            "version": "==2.0"
+        },
+        "django-phonenumber-field": {
+            "hashes": [
+                "sha256:d96c274a6aa9afd4eb4fe922e475a45706d997b2bea22b87f3afc9fb0012db84"
+            ],
+            "index": "pypi",
+            "version": "==2.0.0"
+        },
+        "django-select-multiple-field": {
+            "hashes": [
+                "sha256:18cc3221204b1516718d528fc14d39548af3a130a2355cc668251f78b18d75e8"
+            ],
+            "index": "pypi",
+            "version": "==0.4.2"
+        },
+        "phonenumberslite": {
+            "hashes": [
+                "sha256:1ccb25d6656bbcc0df52bac2ffc2558c54532657797ae4ce37396757ab4f1fff",
+                "sha256:3a9a3e68be823d22b3ed284ae984222d7f8bf6682ad37b35c658c2cf36ca12eb"
+            ],
+            "version": "==8.9.10"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:a061aa0a9e06881eb8b3b2b43f05b9439d6583c206d0a6c340ff72a7b6669053",
+                "sha256:ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277"
+            ],
+            "version": "==2018.5"
+        }
+    },
+    "develop": {}
+}
