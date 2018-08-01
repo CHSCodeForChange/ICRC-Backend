@@ -1,0 +1,27 @@
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+
+<body>
+
+    <h1 class="display-3">Complaint</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="row">
+                {{field}}
+            </div>
+            {% if field.help_text %}
+            <small style="display: none">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+
+        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+    </form>
+</body>
