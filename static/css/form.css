@@ -8,6 +8,10 @@ h1 {
     color: white !important;
 }
 
+h3 {
+    color: white !important;
+}
+
 form {
     display: flex;
     flex-direction: column;

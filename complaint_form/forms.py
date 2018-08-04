@@ -2,20 +2,20 @@ from django import forms
 from .models import *
 
 class PlaceholderForm(forms.ModelForm):
- 
+
     def __init__(self, *args, **kwargs):
         super(PlaceholderForm, self).__init__(*args, **kwargs)
         for field_name in self.fields:
             field = self.fields.get(field_name)
             if field:
-                if type(field.widget) in (forms.TextInput, ):
+                if type(field.widget) in (forms.TextInput, forms.EmailInput, forms.NumberInput, forms.DateInput):
                     field.widget.attrs.update(
                         {'placeholder': field.label, 'class': 'span10 form-control'}
                     )
                 if type(field.widget) in (forms.Select, ):
                     field.widget.attrs.update({'class': 'span10'})
                     field.empty_label = field.label
- 
+
     def as_p(self):
         return self._html_output(
             normal_row='<p%(html_class_attr)s>%(field)s%(help_text)s</p>',

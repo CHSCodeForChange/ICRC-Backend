@@ -24,5 +24,3 @@ def fill_form(request):
 
 def submitted(request):
     return render(request, 'submitted.html')
-
-
