@@ -12,23 +12,26 @@
         {% csrf_token %}
         {% for field in form %}
             {% if forloop.counter == 1 %}
-              <h3 class="display-5" style="color: white">Complainant Information</h3>
+              <h5 class="display-5" style="color: white">Primary Contact Information</h3>
             {% endif %}
             {% if forloop.counter == 9 %}
               <h5 class="display-7" style="color: white">Secondary Contact Information</h5>
             {% endif %}
+            {% if forloop.counter == 17 %}
+              <h5 class="display-7" style="color: white">Offender Information</h5>
+            {% endif %}
             {% if forloop.counter == 25 %}
-              <h3 class="display-5" style="color: white">Area of Discrimination</h3>
+              <h5 class="display-5" style="color: white">Discrimination Information</h5>
             {% endif %}
             {% if forloop.counter == 29 %}
-              <h3 class="display-5" style="color: white">Grievance or Other Action Filed Regarding This Matter</h3>
+              <h5 class="display-5" style="color: white">Action Filed</h5>
             {% endif %}
             {% if forloop.counter == 34 %}
-              <h3 class="display-5" style="color: white">Statement of Allegations</h3>
+              <h5 class="display-5" style="color: white">Statement of Allegations</h5>
             {% endif %}
             {% if forloop.counter == 35 %}
-              <h3 class="display-5" style="color: white">Affirmation</h3>
-              <h5 class="display-7" style="color: white">I affirm, under the penalties for perjury that the foregoing representations are true.</h5>
+              <h5 class="display-5" style="color: white">Affirmation</h5>
+              <p class="display-7" style="color: white">I affirm, under the penalties for perjury that the foregoing representations are true.</p>
             {% endif %}
             <div class="row">
                 {{field}}
@@ -41,6 +44,6 @@
             {% endfor %}
         {% endfor %}
 
-        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </body>

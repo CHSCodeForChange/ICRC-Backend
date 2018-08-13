@@ -1,0 +1,8 @@
+-i https://pypi.org/simple
+babel==2.6.0
+django-localflavor==2.0
+django-phonenumber-field==2.0.0
+django-select-multiple-field==0.4.2
+django==1.11.9
+phonenumberslite==8.9.10
+pytz==2018.5

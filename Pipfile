@@ -8,6 +8,8 @@ django = "==1.11.9"
 django-phonenumber-field = "*"
 django-select-multiple-field = "*"
 django-localflavor = "*"
+django-rest-framework = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
