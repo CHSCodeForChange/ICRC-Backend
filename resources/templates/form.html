@@ -12,26 +12,40 @@
         {% csrf_token %}
         {% for field in form %}
             {% if forloop.counter == 1 %}
-              <h5 class="display-5" style="color: white">Primary Contact Information</h3>
+                <div class="section">
+                    <h5 class="display-5" style="color: white">Primary Contact Information</h3>
             {% endif %}
+        
             {% if forloop.counter == 9 %}
-              <h5 class="display-7" style="color: white">Secondary Contact Information</h5>
+                </div>
+                <div class="section">
+                    <h5 class="display-7" style="color: white">Secondary Contact Information</h5>
             {% endif %}
             {% if forloop.counter == 17 %}
-              <h5 class="display-7" style="color: white">Offender Information</h5>
+                </div>
+                <div class="section">
+                    <h5 class="display-7" style="color: white">Offender Information</h5>
             {% endif %}
             {% if forloop.counter == 25 %}
-              <h5 class="display-5" style="color: white">Discrimination Information</h5>
+                </div>
+                <div class="section">
+                    <h5 class="display-5" style="color: white">Discrimination Information</h5>
             {% endif %}
             {% if forloop.counter == 29 %}
-              <h5 class="display-5" style="color: white">Action Filed</h5>
+                </div>
+                <div class="section">
+                    <h5 class="display-5" style="color: white">Action Filed</h5>
             {% endif %}
             {% if forloop.counter == 34 %}
-              <h5 class="display-5" style="color: white">Statement of Allegations</h5>
+                </div>
+                <div class="section">
+                    <h5 class="display-5" style="color: white">Statement of Allegations</h5>
             {% endif %}
             {% if forloop.counter == 35 %}
-              <h5 class="display-5" style="color: white">Affirmation</h5>
-              <p class="display-7" style="color: white">I affirm, under the penalties for perjury that the foregoing representations are true.</p>
+                </div>
+                <div class="section">
+                      <h5 class="display-5" style="color: white">Affirmation</h5>
+                      <p class="display-7" style="color: white">I affirm, under the penalties for perjury that the foregoing representations are true.</p>
             {% endif %}
             <div class="row">
                 {{field}}
@@ -43,6 +57,7 @@
             <p style="color: red">{{ error }}</p>
             {% endfor %}
         {% endfor %}
+        </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>

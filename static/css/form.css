@@ -6,10 +6,16 @@ body {
 
 h1 {
     color: white !important;
+    font-size: 10vh !important;
 }
 
-h3 {
+h5 {
     color: white !important;
+    font-size: 3vh !important;
+}
+
+p {
+    font-size: 2.5vh !important;
 }
 
 form {
@@ -25,12 +31,21 @@ input {
     background-color: white !important;
     color: black !important;
 
-    width: 50vw !important;
+    width: 95vh !important;
+    max-width: 90vw !important;
+    height: 6vh !important;
+    
     margin: 2%;
+    
+    font-size: 2vh !important;
+    padding: 2% !important;
+    
 }
 
 input::placeholder {
     color: black !important;
+    font-size: 2.5vh;
+    padding: 2%;
 }
 
 select {
@@ -40,11 +55,24 @@ select {
     background-color: white !important;
     color: black !important;
 
-    width: 50vw !important;
+    width: 95vh !important;
+    max-width: 90vw !important;
+    height: 6vh !important;
+    
+    font-size: 2vh;
+    padding: 2%;
+    
     margin: 2%;
 }
 
 button {
-    width: 50vw !important;
+    width: 95vh !important;
+    max-width: 90vw !important;
+    height: 6vh !important;
+
     border-radius: 250px !important;
+}
+
+.section {
+    margin: 2%;
 }
