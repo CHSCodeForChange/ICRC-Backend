@@ -12,6 +12,10 @@ class PlaceholderForm(forms.ModelForm):
                     field.widget.attrs.update(
                         {'placeholder': field.label, 'class': 'span10 form-control'}
                     )
+                if type(field.widget) is (forms.DateInput):
+                    field.widget.attrs.update(
+                        {'placeholder': field.label + " (mm/dd/yyyy)", 'class': 'span10 form-control'}
+                    )
                 if type(field.widget) in (forms.Select, ):
                     field.widget.attrs.update({'class': 'span10'})
                     field.empty_label = field.label
@@ -25,7 +29,16 @@ class PlaceholderForm(forms.ModelForm):
             errors_on_separate_row=True
         )
 
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+
 class NewComplaintForm(PlaceholderForm):
+    discrimination_description = forms.CharField(widget=forms.Textarea(attrs={'type': 'text',
+           'class': 'form-control',
+           'rows':10,
+           'cols':58}))
     class Meta:
         model = Complaint
         exclude = []

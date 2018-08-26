@@ -5,7 +5,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url('^', views.fill_form),
-    url('^submitted', views.submitted)
-
+    url(r'^$', views.fill_form),
+    url(r'^submitted', views.submitted),
 ]
