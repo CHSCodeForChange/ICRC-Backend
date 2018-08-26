@@ -20,6 +20,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('complaint_form.urls')),
     url(r'^api/', include('complaint_form.api.urls')),
-
-
 ]

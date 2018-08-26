@@ -7,5 +7,4 @@ from . import views
 urlpatterns = [
     url('^$', views.fill_form),
     url('^submitted/$', views.submitted)
-
 ]
