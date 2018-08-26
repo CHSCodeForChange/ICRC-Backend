@@ -141,3 +141,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # sets the the default region for the phone number field
 PHONENUMBER_DEFAULT_REGION = 'US'
+
+EMAIL_HOST_USER = 'icrcformtest@gmail.com' #this is a testing account
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'Yqq-vuo-G7F-D6U'
+EMAIL_PORT = 587
