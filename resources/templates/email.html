@@ -13,20 +13,41 @@
 		        </td>
             </table>
         </div>
-			<div align="center">
+			<div align="Center">
                 <div style="display:block;width:800px;padding-bottom:5%;">
                     <div style="position:relative;left:25px;top:25px;">
-                        <p style="font-size:18px;padding-left:100px;padding-right:100px;" align="center">
-                             {{ form.first_name.value }} has submitted a complaint regarding discrimination:
+                        <p style="font-size:18px;padding-left:100px;padding-right:100px;" align="Center">
+                             {{ form.first_name.value }} {{form.last_name.value}} has submitted a complaint regarding discrimination:
 	                    </p>
                         <table cellpadding="5%" style="margin-left:10%;margin-right:10%;margin-top:5%;margin-bottom:5%;font-size:12px;", align="center">
                           {% for field in form %}
-                          <tr>
-                            <th style="vertical-align:top;text-align:right;">{{field.label}}</th>
-                            <td>{{field.value}}</td>
-                          </tr>
-                          {% endfor %}
-
+													{% if field.label != 'Offender type' and field.label != 'Discrimination type' and field.label != 'Discrimination basis' and field.label != 'Reference' %}
+														<tr>
+                            	<th style="vertical-align:top;text-align:center;">{{field.label}}</th>
+                            	<td>{{field.value}}</td>
+                          	</tr>
+													{% elif field.label == 'Offender type' %}
+														<tr>
+															<th style="vertical-align:top;text-align:center;">{{field.label}}</th>
+															<td>{{submitted.get_offender_type_display}}</td>
+														</tr>
+													{% elif field.label == 'Discrimination type' %}
+														<tr>
+															<th style="vertical-align:top;text-align:center;">{{field.label}}</th>
+															<td>{{submitted.get_discrimination_type_display}}</td>
+														</tr>
+													{% elif field.label == 'Discrimination basis' %}
+														<tr>
+															<th style="vertical-align:top;text-align:center;">{{field.label}}</th>
+															<td>{{submitted.get_discrimination_basis_display}}</td>
+														</tr>
+													{% elif field.label == 'Reference' %}
+														<tr>
+															<th style="vertical-align:top;text-align:center;">{{field.label}}</th>
+															<td>{{submitted.get_reference_display}}</td>
+														</tr>
+													{% endif %}
+													{% endfor %}
                         </table>
                         <br/>
                         <br/>
