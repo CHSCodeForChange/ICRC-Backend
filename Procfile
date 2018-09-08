@@ -1,1 +1,1 @@
-web: gunicorn icrc_backend.wsgi --log-file -
+web: gunicorn icrc_backend.wsgi 
