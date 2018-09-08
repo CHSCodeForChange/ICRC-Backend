@@ -12,6 +12,10 @@ pytz = "==2018.5"
 Babel = "==2.6.0"
 Django = "==1.11.9"
 djangorestframework = "*"
+gunicorn = "==19.7.1"
+whitenoise = "==3.3.1"
+dj-database-url = "==0.4.2"
+psycopg2-binary = "==2.7.4"
 
 [dev-packages]
 
