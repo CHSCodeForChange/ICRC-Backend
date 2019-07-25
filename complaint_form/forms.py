@@ -17,7 +17,8 @@ class PlaceholderForm(forms.ModelForm):
                         {'placeholder': field.label + " (mm/dd/yyyy)", 'class': 'span10 form-control'}
                     )
                 if type(field.widget) in (forms.Select, ):
-                    field.widget.attrs.update({'class': 'span10'})
+                    field.widget.attrs.update({'placeholder': field.label, 'class': 'span10'})
+                    field.choices = [("", field.label),] + list(field.choices)[1:] 
                     field.empty_label = field.label
 
     def as_p(self):
