@@ -92,11 +92,11 @@ WSGI_APPLICATION = 'icrc_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd64q8b6m9ri5gj',
-        'USER': 'pkqowaviwkwumu',
-        'PASSWORD': '73c6adc5a22a4556f7a9ba948458e66d8e92024df3d11f365e213694f8482c8d',
-        'HOST': 'ec2-107-21-216-112.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -161,5 +161,5 @@ PHONENUMBER_DEFAULT_REGION = 'US'
 EMAIL_HOST_USER = 'icrcformtest@gmail.com' #this is a testing account
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'pzblnoseqtypweah'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
 EMAIL_PORT = 587
